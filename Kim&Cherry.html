@@ -8,7 +8,7 @@
     <title>Kim & Cherry</title>
     <style>
         body {
-            background: rgb(53, 53, 53) !important;
+            /* background: rgb(53, 53, 53) !important; */
             color: white !important;
         }
 
@@ -49,6 +49,8 @@
             text-shadow: 0 0 0.2em rgb(0 255 243), 0 0 0.2em rgb(96 255 218);
             font-family: cursive;
             padding: 0 30px;
+            transition: 1s;
+
         }
 
         #ss {
@@ -98,10 +100,115 @@
                 transform: perspective(160px) rotateX(0deg);
             }
 
+            75% {
+                opacity: 10%;
+                /* transform: perspective(160px) rotateX(-35deg); */
+            }
+
             100% {
                 opacity: 0%;
                 transform: perspective(160px) rotateX(-70deg);
             }
+        }
+
+        .go_time {
+            display: flex;
+            justify-content: center;
+            margin: 70px 0;
+            font-size: 60px;
+            transition: 1s;
+
+
+        }
+
+        .top_img {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            transition: 1s;
+
+        }
+
+        /* RWD撰寫 */
+        .top_div {
+            display: flex;
+            justify-content: center;
+            height: 1000px;
+            min-width: 1400px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .top_div {
+                height: 900px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .top_img {
+                width: auto;
+                height: 550px !important;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .go_time {
+                font-size: 50px;
+
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .time_num {
+                padding: 0 15px;
+
+            }
+        }
+
+        .container1 {
+            margin-top: 110px;
+            background: #000000b8;
+            border-radius: 30px;
+            padding: 30px 40px;
+            min-width: 1300px;
+            transition: 1s;
+
+        }
+
+        @media screen and (max-width: 1000px) {
+            .container1 {
+                margin-top: 50px;
+                min-width: 1100px;
+                height: 900px;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+            .goolge_map {
+                margin: 30px 0;
+                height: 450px;
+            }
+        }
+
+        .bottom_div {
+            width: 1400px;
+            margin: 0 auto;
+            margin-top: 175px;
+        }
+        @media screen and (max-width: 1000px) {
+            .bottom_div {
+                margin-top: 50px;
+
+                width: 1100px;
+            }
+        }
+        @media screen and (max-width: 1000px) {
+            .goolge_map {
+                width: 900px;
+            }
+        }
+        .carousel-item{
+            display: flex;
+            justify-content: center;
         }
     </style>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -127,16 +234,15 @@
 </head>
 
 <body>
-    <div style="display: flex;justify-content: center; height: 1000px;">
+    <div class="top_div">
         <div class="bg_2"> </div>
         <div style="position: absolute;z-index: 99;">
             <h1 style="text-align: center; margin: 20px 0; color: white;background: #00000021; ">WEDDING INVITATION</h2>
-                <div style="display: flex; justify-content: center; margin: 30px 0;">
+                <div class="top_img">
                     <img src="./imgs/非官方喜帖.jpg" width="700">
                 </div>
                 <h1 style="text-align: center; font-family: cursive; letter-spacing: 3px;">2023年02月26號(日)午宴</h2>
-                    <h1 class="time_num"
-                        style="display: flex;justify-content: center; margin: 70px 0; font-size: 60px;">
+                    <h1 class="time_num go_time">
                         <table>
                             <tr>
                                 <td class="time_text">倒數</td>
@@ -154,11 +260,10 @@
         </div>
     </div>
 
-    <div style="display: flex;justify-content: center; height: 1000px;">
+    <div style="display: flex;justify-content: center; height: 1000px; min-width: 1400px;">
         <div class="bg_3"></div>
-        <div style="position: absolute;z-index: 99; width: 100%;">
-            <div class="container "
-                style="margin-top: 110px;background: #000000b8;border-radius: 30px;padding: 20px 50px; max-width: 1350px;">
+        <div style="position: absolute;z-index: 99; width: auto;">
+            <div class="container1">
                 <h1 class="text-center">晶綺盛宴台鋁館</h1>
                 <hr>
                 <div class="row">
@@ -175,7 +280,7 @@
                         <i class="fab fa-facebook"></i> <a href="https://www.facebook.com/jubileehallNo.1/">晶綺盛宴</a><br>
                     </div>
                     <div class="col-sm-9">
-                        <iframe
+                        <iframe class="goolge_map"
                             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14733.331781164323!2d120.3037398!3d22.6040389!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70a137e97572d179!2z5pm257a655ub5a605Y-w6YuB6aSo!5e0!3m2!1szh-TW!2stw!4v1653037809233!5m2!1szh-TW!2stw"
                             width="100%" height="620" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
@@ -184,12 +289,11 @@
         </div>
     </div>
 
-    <div style="display: flex;justify-content: center; height: 1000px;">
+    <div style="display: flex;justify-content: center; height: 1000px;min-width: 1400px;">
 
         <div class="bg_4"> </div>
-        <div style="position: absolute;z-index: 99; width: 100%;">
-            <div id="carouselExampleControls" class="carousel slide " data-ride="carousel"
-                style="width: 1400px; margin: 0 auto; margin-top: 175px;">
+        <div style="position: absolute;z-index: 99; width: auto;">
+            <div id="carouselExampleControls" class="carousel slide bottom_div" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img class="d-block w-100" src="./imgs/盛宴館.jpg" height="800" alt="First slide">
