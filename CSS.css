@@ -1,0 +1,31 @@
+﻿hr {
+    border-top: 1px solid #000;
+    width: 50%;
+}
+
+
+a:link {
+    text-decoration: none;
+}
+
+#contact2 {
+    letter-spacing: 3px;
+}
+
+
+
+#author a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    background: #ffe1dd;
+    box-shadow: 0px 0px 20px 30px #ffe1dd;
+    margin: 50px 0px;
+}
+
+.Nohref {
+    color: black;
+    pointer-events: none;
+}

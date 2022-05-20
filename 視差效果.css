@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.parallax {
+  /* 設定背景圖片/居中/不重覆 */
+  background: url("https://photo.minwt.com/cc0/09.jpg")center center no-repeat;
+
+  /* 設定區塊高度 */
+  min-height: 900px;
+
+
+  /* 背景自動縮放/固定 */
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.parallax {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+
+}
+
+.parallax:before {
+  position: absolute;
+
+  background-color: rgb(255, 134, 180);
+  opacity: 0.2;
+  height: 100%;
+  width: 100%;
+
+  display: block;
+  content: '';
+
+}
+
+.parallax .innet {
+  position: relative;
+  opacity: 0.2;
+
+}
+
+.parallax h1 {
+  display: flex;
+  color: rgb(255, 171, 75);
+  text-shadow: black 1px 1px 1px;
+  font-size: 5em;
+  line-height: 1.1;
+
+
+}
+
+.parallax .more {
+  position: absolute;
+
+  text-decoration: none;
+  overflow: hidden;
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(90, 90, 90, 0.486);
+  white-space: nowrap;
+  font-size: 30px;
+  height: 2em;
+  width: 2em;
+  min-height: 0;
+  top: 90%;
+  transition: height 0.2s ease;
+  animation: more 0.75s ease-out 1s forwards;
+
+
+
+
+}
+
+.parallax .more:before {
+  position: relative;
+  font-style: normal;
+  font-weight: normal;
+  text-transform: none !important;
+  content: '\25BC';
+  font-size: 1.5em;
+  bottom: -8px;
+  color: rgba(255, 255, 255, 0.712);
+}
+
+.parallax .more:hover {
+  background: none;
+  box-shadow: 0 0 1px 0 rgba(255, 255, 255, 0.5);
+
+
+}
+
+.parallax .more:hover:before {
+  color: rgb(87, 165, 255);
+
+}
+
+
+.bg_2 {
+  background: url(./imgs/盛宴館.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  min-height: 1000px;
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  filter: blur(9px);
+}
+
+
+.bg_3 {
+  background-image: url(./imgs/門口.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 1000px;
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  filter: blur(2px);
+}
+
+.bg_4 {
+  background: url(./imgs/桌子.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  min-height: 1050px;
+  background-attachment: fixed;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  filter: blur(5px);
+}
+
+/* filter: blur(5px); */
+
